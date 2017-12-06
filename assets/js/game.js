@@ -34,7 +34,7 @@ var psychicGame =  {
 	updateStatus: function(status, txtColor){
 		getEl('status').innerHTML = status ;
 		getEl('status').style.color = txtColor;	
-		console.log('updateStatus', status, txtColor);	
+		// console.log('updateStatus', status, txtColor);	
 	},
 
 	resetGame: function(){
