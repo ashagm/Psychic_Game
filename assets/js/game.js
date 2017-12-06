@@ -72,7 +72,7 @@ function getEl(id){
 	return document.getElementById(id);
 }
 
-document.onkeyup = function(event){
+window.addEventListener('keyup', function(event) {
 
 	let userPick = String.fromCharCode(event.keyCode).toLowerCase();
 	console.log("You typed", (event.key).toLowerCase());
@@ -93,7 +93,7 @@ document.onkeyup = function(event){
 				init();
 			}
 		}
-}
+});
 
 
 //Begin Game

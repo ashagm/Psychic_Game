@@ -4,34 +4,30 @@
 
 body{
 	font-family: 'Macondo Swash Caps', Arial, cursive;
-	background: url('../images/bg-1.jpg');
+	background: url('../images/bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: #fff;
 	font-weight: bolder;	
+	height: 100vh;
 }
 
 .wrapper{
 	display: flex;
 	flex-direction: column;	
-	align-items: center;
+	/*align-items: center;*/
 }
 
-.h1{
+header .h1{
 	font-size: 52px;
 	padding: 10px;
 }
 
-.h2{
+header .h2{
 	font-size: 32px;
 	padding: 10px;
 }
 
-header,
-main,
-footer{
-	/*border: 1px solid #fff;*/
-}
 
 header{
 	min-height: 20vh;
@@ -43,6 +39,7 @@ main{
 
 footer{
 	min-height: 10vh;
+	padding-top: 20px;
 }
 
 .main-content{
@@ -50,13 +47,12 @@ footer{
 	width: 500px;
 	display: flex;
 	flex-direction: column;
-	/*align-items: center;*/
-	justify-content: space-around;
+	justify-content: space-evenly;
 }
 
 .results{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .wins,
@@ -68,6 +64,8 @@ footer{
 	background-color: transparent;
 	padding: 10px 20px;
 }
+
+
 
 
 
