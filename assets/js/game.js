@@ -27,14 +27,12 @@ var psychicGame =  {
 
 	updateGuesses: function(char){
 		this.guesses.push(char);
-		getEl('guesses').innerHTML = this.guesses ;
-		// console.log(this.guesses);
+		getEl('guesses').innerHTML = this.guesses.join(", ") ;
 	},
 
 	updateStatus: function(status, txtColor){
 		getEl('status').innerHTML = status ;
-		getEl('status').style.color = txtColor;	
-		// console.log('updateStatus', status, txtColor);	
+		getEl('status').style.color = txtColor;		
 	},
 
 	resetGame: function(){
@@ -45,7 +43,6 @@ var psychicGame =  {
 		getEl('guesses').innerHTML = this.guesses ;
 
 		this.resetStatus();
-		// console.log('wins=', this.wins, 'losses=',this.losses, 'guesses=',this.guesses, 'chances=',this.chances);				
 	},
 
 	resetStatus: function(){
@@ -54,7 +51,6 @@ var psychicGame =  {
 	},
 
 	beginGame: function(){
-		// console.log("Begin game...pick a character");
 		return this.pickRandomCharacter();
 	}
 }
@@ -75,7 +71,7 @@ function getEl(id){
 window.addEventListener('keyup', function(event) {
 
 	let userPick = String.fromCharCode(event.keyCode).toLowerCase();
-	console.log("You typed - ", (event.key).toLowerCase());
+	// console.log("You typed - ", (event.key).toLowerCase());
 		
 		if(userPick === computerPick){
 			psychicGame.updateWins();
@@ -94,7 +90,6 @@ window.addEventListener('keyup', function(event) {
 			}
 		}
 });
-
 
 //Begin Game
 
